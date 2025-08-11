@@ -1,0 +1,8 @@
+.claude
+CLAUDE.md
+.vscode
+.env
+.cache
+node_modules
+temp/
+local/
