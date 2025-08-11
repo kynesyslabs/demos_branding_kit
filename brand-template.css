@@ -1,10 +1,9 @@
-/* DEMOS Network Brand Template CSS
- * Copy this file to your project and customize as needed
- * Based on demoscan reference implementation
+/* DEMOS Network Brand Template
+ * Universal branding for all DEMOS Network projects
+ * Copy this file to your project and customize paths as needed
  */
 
 /* ===== FONT IMPORTS ===== */
-/* Adjust paths based on your project structure */
 @font-face {
     font-family: FiraCode;
     src: url('../fonts/Fira_Code/FiraCode-VariableFont_wght.ttf') format("truetype-variations");
@@ -39,7 +38,7 @@
 /* ===== BRAND COLORS ===== */
 :root {
     --input-padding: 16.2px;
-    --lgray: #A8ACAF;
+    --lgray: #a8acaf;
     --shadow: 2px 2px var(--background3);
 }
 
@@ -49,10 +48,10 @@
         --background: #000;
         --background2: #141414;
         --background3: #303030;
-        --color: #FFF;
-        --color2: #F8F8FF;
+        --color: #fff;
+        --color2: #f8f8ff;
         --color3: #cfcfcf;
-        --color4: #A8ACAF;
+        --color4: #a8acaf;
         --error: #b8294d;
         --success: #00b894;
         --filter: invert(1);
@@ -62,7 +61,7 @@
 /* Light Theme (Secondary) */
 @media (prefers-color-scheme: light) {
     :root {
-        --background: #FFF;
+        --background: #fff;
         --background2: #f5f5f5;
         --background3: #d9d9d9;
         --color: #000;
@@ -80,10 +79,10 @@
     --background: #000;
     --background2: #141414;
     --background3: #303030;
-    --color: #FFF;
-    --color2: #F8F8FF;
+    --color: #fff;
+    --color2: #f8f8ff;
     --color3: #cfcfcf;
-    --color4: #A8ACAF;
+    --color4: #a8acaf;
     --error: #b8294d;
     --success: #00b894;
     --filter: invert(1);
@@ -91,7 +90,7 @@
 
 /* Force Light Theme */
 [data-theme="light"] {
-    --background: #FFF;
+    --background: #fff;
     --background2: #f5f5f5;
     --background3: #d9d9d9;
     --color: #000;
@@ -115,8 +114,7 @@ html {
 body {
     background-color: var(--background);
     color: var(--color);
-    font-family: FiraCode, monospace;  /* Technical projects */
-    /* font-family: Inter, sans-serif; /* Modern UI projects */
+    font-family: FiraCode, monospace;
     margin: 0;
     height: 100%;
     font-weight: 400;
@@ -134,88 +132,31 @@ button {
 
 /* ===== BRAND COMPONENTS ===== */
 
-/* Logo Styles */
-.logo-header {
-    height: 32px;
-    width: auto;
-    filter: var(--filter, none);
-}
-
-.logo-hero {
-    height: 64px;
-    width: auto;
-    max-width: 300px;
-}
-
-/* Card Components */
-.card {
+/* Cards */
+.grid-card {
     border-radius: 14px;
     background: rgb(255 255 255 / 8%);
     backdrop-filter: blur(15px);
     border: 0.5px solid rgb(255 255 255 / 8%);
-    padding: 24px;
-    margin: 16px 0;
+    max-width: 1250px;
+    margin: auto;
 }
 
-/* Button Styles */
-.btn-primary {
-    background: var(--color2);
-    color: var(--background);
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-family: inherit;
-    font-weight: 500;
-    transition: all 0.2s ease;
+/* Labels */
+.label {
+    margin: 8px 0;
+    opacity: 0.75;
+    display: block;
 }
 
-.btn-primary:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-}
-
-.btn-secondary {
-    background: var(--background3);
-    color: var(--color);
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-family: inherit;
-    font-weight: 500;
-    transition: all 0.2s ease;
-}
-
-/* Input Styles */
-.input {
-    width: 100%;
-    padding: var(--input-padding);
-    background: var(--background2);
-    border: 1px solid var(--background3);
-    border-radius: 8px;
-    color: var(--color);
-    font-family: inherit;
-    transition: all 0.2s ease;
-}
-
-.input:focus {
-    outline: none;
-    border-color: var(--color4);
-    box-shadow: 0 0 0 3px rgba(var(--color4), 0.1);
-}
-
-/* Status Indicators */
-.status-error {
-    color: var(--error);
-    background: color-mix(in srgb, var(--error) 10%, transparent);
-    border: 1px solid color-mix(in srgb, var(--error) 20%, transparent);
-    padding: 12px 16px;
-    border-radius: 8px;
-}
-
-.status-success {
-    color: var(--success);
-    background: color-mix(in srgb, var(--success) 10%, transparent);
-    border: 1px solid color-mix(in srgb, var(--success) 20%, transparent);
-    padding: 12px 16px;
-    border-radius: 8px;
+/* Title Container */
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--background3);
+    padding-bottom: 16px;
+    color: var(--color4);
+    margin-bottom: 50px;
 }
 
 /* Utility Classes */
@@ -254,52 +195,5 @@ button {
 @media (width <= 767px) {
     :root {
         --input-padding: 12px;
-    }
-    
-    .logo-hero {
-        height: 48px;
-    }
-    
-    .card {
-        padding: 16px;
-        margin: 12px 0;
-    }
-}
-
-/* ===== ANIMATIONS ===== */
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.animate-slide-in {
-    animation: slideIn 0.3s ease-out;
-}
-
-.animate-spin {
-    animation: spin 1s linear infinite;
-}
-
-/* ===== PRINT STYLES ===== */
-@media print {
-    body {
-        background: white;
-        color: black;
-    }
-    
-    .logo-header, .logo-hero {
-        filter: none;
     }
 }

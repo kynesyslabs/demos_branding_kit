@@ -4,10 +4,10 @@ Complete branding assets for DEMOS Network projects.
 
 ## 📁 What's Included
 
-- **7 Logo Variants** - SVG, PNG, WebP formats  
-- **4 Font Families** - FiraCode, Inter, Neue Machina, Source Code Pro (50+ files)
+- **3 Logo Variants** - Primary, alternative, and legacy formats
+- **5 Font Families** - FiraCode, Inter, Neue Machina, Source Code Pro, HelveticaNeue (50+ files)
 - **Ready-to-use CSS** - brand-template.css with complete brand system
-- **Reference CSS** - Examples from demoscan, frontend, aptos-demo
+- **Reference CSS** - Clean implementation example
 
 ## 🚀 Quick Start
 
