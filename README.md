@@ -29,9 +29,5 @@ echo '<img src="/logos/Logo DEMOS White.svg" alt="DEMOS" height="32" />'
 - **[BRANDING_GUIDE.md](BRANDING_GUIDE.md)** - Complete implementation guide with examples
 - **[brand-template.css](brand-template.css)** - Ready-to-use CSS template
 
-## 🎯 Reference
-
-Use **demoscan** project as the gold standard for DEMOS branding implementation.
-
 ---
 *Everything you need is in BRANDING_GUIDE.md*
